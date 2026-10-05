@@ -80,7 +80,7 @@ export async function generatePlan(idea: string): Promise<ProjectPlan> {
         generationConfig: {
           temperature: 0.7,
           responseMimeType: "application/json",
-          thinkingConfig: { thinkingBudget: "low" },
+          thinkingConfig: { thinkingLevel: "low" },
         },
       }),
     }
