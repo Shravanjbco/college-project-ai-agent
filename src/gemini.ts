@@ -1,6 +1,6 @@
 import type { ProjectPlan } from "./types";
 
-const MODEL = "gemini-2.5-flash";
+const MODEL = "gemini-3.8-flash";
 
 const SYSTEM_PROMPT = `You are a college project architect. Help students transform project ideas into realistic final-year software projects. Recommend technologies appropriate for their skill level and project complexity. Keep suggestions practical and achievable.
 
@@ -80,7 +80,7 @@ export async function generatePlan(idea: string): Promise<ProjectPlan> {
         generationConfig: {
           temperature: 0.7,
           responseMimeType: "application/json",
-          thinkingConfig: { thinkingBudget: 0 },
+          thinkingConfig: { thinkingBudget: "low" },
         },
       }),
     }
